@@ -1,4 +1,4 @@
-import { Colour } from "@/types/colour";
+import { Colour } from "@/types/Colour";
 
 export default function colourDistances(
   colours: Colour[],
