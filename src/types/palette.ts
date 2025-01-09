@@ -1,5 +1,5 @@
 import { LuminanceRange } from "./colourTypes";
-import { Colour } from "./colour";
+import { Colour } from "./Colour";
 
 export interface Palette {
   targetRation: number;
