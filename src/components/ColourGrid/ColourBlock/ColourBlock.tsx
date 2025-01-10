@@ -23,7 +23,6 @@ export default function ColourBlock({
         "row-span-4": isLarge,
         "row-span-1": !isLarge,
         "rounded-tl-3xl": index === 0,
-
         "rounded-tr-3xl": index === 2,
         "rounded-bl-3xl": index === 6,
         "rounded-br-3xl": index === 8,
