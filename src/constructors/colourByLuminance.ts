@@ -1,6 +1,6 @@
-import iterateRgbForLuminance from "@/actions/colour/iterateRgbForLuminance";
-import { Colour } from "@/types/colour";
+import { Colour } from "@/types/Colour";
 
+import iterateRgbForLuminance from "@/actions/colour/iterateRgbForLuminance";
 import rgbToHex from "@/utils/rgbToHex";
 import rgbToHsl from "@/utils/rgbToHsl";
 import rgbToXyz from "@/utils/rgbToXyz";
