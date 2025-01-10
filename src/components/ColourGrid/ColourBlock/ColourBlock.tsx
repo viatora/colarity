@@ -34,6 +34,7 @@ export default function ColourBlock({
       style={{ backgroundColor: colour }}
     >
       {isPrimary ? (
+        // THIS BUTTON CAN BE USED TO GENERATE A NEW RANDOM COLOUR
         <button className="bg-white p-2 px-4 rounded-md hover:bg-slate-200">
           random colour
         </button>

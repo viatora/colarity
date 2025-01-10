@@ -1,4 +1,3 @@
-import { isPrimitive } from "util";
 import ColourBlock from "./ColourBlock/ColourBlock";
 
 export default function ColourGrid() {
