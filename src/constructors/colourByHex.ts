@@ -1,4 +1,4 @@
-import { Colour } from "@/types/colour";
+import { Colour } from "@/types/Colour";
 
 import hexToRgb from "@/utils/hexToRgb";
 import rgbToHsl from "@/utils/rgbToHsl";
