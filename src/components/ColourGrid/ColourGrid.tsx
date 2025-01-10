@@ -1,16 +1,25 @@
 import ColourBlock from "./ColourBlock/ColourBlock";
 
 export default function ColourGrid() {
+  // Max, these variables are what you can change to change the background of the colour blobs
+  const primaryColour = `#3b82f6`;
+  const secondaryColour = `#34d399`;
+  const successColour = `#22c55e`;
+  const errorColour = `#ef4444`;
+  const warningColour = `#eab308`;
+  const infoColour = `#38bdf8`;
+  const neutralColour = `#000000`;
+
   const myColours = [
-    { colour: "bg-blue-500", isLarge: true },
-    { colour: "bg-red-500", isLarge: true },
-    { colour: "bg-green-500" },
-    { colour: "bg-purple-500" },
-    { colour: "bg-yellow-500" },
-    { colour: "bg-pink-500" },
-    { colour: "bg-orange-500" },
-    { colour: "bg-slate-500" },
-    { colour: "bg-sky-500" },
+    { colour: primaryColour, isLarge: true },
+    { colour: secondaryColour, isLarge: true },
+    { colour: successColour, semanticName: "Success" },
+    { colour: errorColour, semanticName: "Error" },
+    { colour: warningColour, semanticName: "Warning" },
+    { colour: infoColour, semanticName: "Info" },
+    { colour: primaryColour },
+    { colour: secondaryColour },
+    { colour: neutralColour, semanticName: "Neutral" },
   ];
 
   return (
@@ -22,6 +31,7 @@ export default function ColourGrid() {
               key={index}
               colour={colour.colour}
               isLarge={colour.isLarge}
+              semanticName={colour.semanticName}
             />
           );
         })}
