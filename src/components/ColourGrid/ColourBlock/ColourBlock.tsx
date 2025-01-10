@@ -6,6 +6,7 @@ interface ColourBlockProps {
   colour: string;
   semanticName: string | undefined;
   contrastColour: string | undefined;
+  isPrimary: boolean | undefined;
   index: number;
 }
 
@@ -16,6 +17,7 @@ export default function ColourBlock({
   semanticName,
   contrastColour,
   index,
+  isPrimary,
 }: ColourBlockProps) {
   return (
     <div
@@ -31,6 +33,11 @@ export default function ColourBlock({
       // "Since bg-[${colour}] syntax doesn’t dynamically support arbitrary hex codes, use style for true dynamic values"
       style={{ backgroundColor: colour }}
     >
+      {isPrimary ? (
+        <button className="bg-white p-2 px-4 rounded-md hover:bg-slate-200">
+          random colour
+        </button>
+      ) : undefined}
       {semanticName ? (
         <p className={clsx({ "text-white": semanticName === "Neutral" })}>
           {semanticName}

@@ -1,3 +1,4 @@
+import { isPrimitive } from "util";
 import ColourBlock from "./ColourBlock/ColourBlock";
 
 export default function ColourGrid() {
@@ -12,7 +13,7 @@ export default function ColourGrid() {
   const contrastColour = "white";
 
   const myColours = [
-    { colour: primaryColour, isLarge: true },
+    { colour: primaryColour, isLarge: true, isPrimary: true },
     { colour: secondaryColour, isLarge: true },
     { colour: successColour, semanticName: "Success" },
     { colour: errorColour, semanticName: "Error" },
@@ -36,6 +37,7 @@ export default function ColourGrid() {
               isContrastBlock={colour.isContrastBlock}
               contrastColour={contrastColour}
               index={index}
+              isPrimary={colour.isPrimary}
             />
           );
         })}
