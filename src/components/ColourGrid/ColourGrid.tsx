@@ -9,6 +9,7 @@ export default function ColourGrid() {
   const warningColour = `#eab308`;
   const infoColour = `#38bdf8`;
   const neutralColour = `#000000`;
+  const contrastColour = "white";
 
   const myColours = [
     { colour: primaryColour, isLarge: true },
@@ -17,8 +18,8 @@ export default function ColourGrid() {
     { colour: errorColour, semanticName: "Error" },
     { colour: warningColour, semanticName: "Warning" },
     { colour: infoColour, semanticName: "Info" },
-    { colour: primaryColour },
-    { colour: secondaryColour },
+    { colour: primaryColour, isContrastBlock: true },
+    { colour: secondaryColour, isContrastBlock: true },
     { colour: neutralColour, semanticName: "Neutral" },
   ];
 
@@ -32,6 +33,9 @@ export default function ColourGrid() {
               colour={colour.colour}
               isLarge={colour.isLarge}
               semanticName={colour.semanticName}
+              isContrastBlock={colour.isContrastBlock}
+              contrastColour={contrastColour}
+              index={index}
             />
           );
         })}
