@@ -1,7 +1,19 @@
+import clsx from "clsx";
+
 interface ColourBlockProps {
-  size: string;
+  isLarge: boolean | undefined;
+  colour: string;
 }
 
-export default function ColourBlock({ size }: ColourBlockProps) {
-  return <div className="h-10 w-10 bg-green-400"></div>;
+export default function ColourBlock({ isLarge, colour }: ColourBlockProps) {
+  return (
+    <div
+      className={clsx("col-span-1 ", colour, {
+        "row-span-4": isLarge,
+        "row-span-1": !isLarge,
+      })}
+    >
+      Div 1
+    </div>
+  );
 }

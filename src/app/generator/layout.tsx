@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="w-full h-10 bg-pink-300"></div>
-      <div className="w-full h-36 bg-sky-200 text-7xl pl-10 flex items-center">
-        COLARITY
+      <div className="w-full h-24 bg-sky-100 px-10 flex items-center justify-between">
+        <h1 className="text-5xl">Colarity</h1>
+        <button className="bg-white p-2 rounded-md text-base">Log In</button>
       </div>
       <Navbar />
       <div className="">{children}</div>
